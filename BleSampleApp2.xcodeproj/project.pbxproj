@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B40C3371DEF0F830096DD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B40C3361DEF0F830096DD8E /* Main.storyboard */; };
+		1B40C3391DEF13980096DD8E /* putUrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40C3381DEF13980096DD8E /* putUrlViewController.swift */; };
+		1B4FF0AD1DEF06AC00D0AD98 /* createViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FF0AC1DEF06AC00D0AD98 /* createViewController.swift */; };
+		1B6A4E4F1DEED7DE004CC47A /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A4E4B1DEED7DE004CC47A /* 0.png */; };
+		1B6A4E501DEED7DE004CC47A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A4E4C1DEED7DE004CC47A /* 1.png */; };
+		1B6A4E511DEED7DE004CC47A /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A4E4D1DEED7DE004CC47A /* 2.png */; };
+		1B6A4E521DEED7DE004CC47A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A4E4E1DEED7DE004CC47A /* OnboardingViewController.swift */; };
+		1B6A4E541DEEDE5C004CC47A /* googleform.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A4E531DEEDE5C004CC47A /* googleform.png */; };
+		1B6A4E561DEEECF9004CC47A /* googleform2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A4E551DEEECF9004CC47A /* googleform2.png */; };
 		1BD9EDCD1DE187F7007679BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9EDCC1DE187F7007679BE /* AppDelegate.swift */; };
 		1BD9EDCF1DE187F7007679BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9EDCE1DE187F7007679BE /* ViewController.swift */; };
-		1BD9EDD21DE187F7007679BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9EDD01DE187F7007679BE /* Main.storyboard */; };
 		1BD9EDD41DE187F7007679BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9EDD31DE187F7007679BE /* Assets.xcassets */; };
 		1BD9EDD71DE187F7007679BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9EDD51DE187F7007679BE /* LaunchScreen.storyboard */; };
 		1BD9EDE21DE187F7007679BE /* BleSampleApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9EDE11DE187F7007679BE /* BleSampleApp2Tests.swift */; };
@@ -35,10 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B40C3361DEF0F830096DD8E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1B40C3381DEF13980096DD8E /* putUrlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = putUrlViewController.swift; sourceTree = "<group>"; };
+		1B4FF0AC1DEF06AC00D0AD98 /* createViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createViewController.swift; sourceTree = "<group>"; };
+		1B6A4E4B1DEED7DE004CC47A /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = SOURCE_ROOT; };
+		1B6A4E4C1DEED7DE004CC47A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = SOURCE_ROOT; };
+		1B6A4E4D1DEED7DE004CC47A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = SOURCE_ROOT; };
+		1B6A4E4E1DEED7DE004CC47A /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B6A4E531DEEDE5C004CC47A /* googleform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleform.png; sourceTree = SOURCE_ROOT; };
+		1B6A4E551DEEECF9004CC47A /* googleform2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleform2.png; sourceTree = SOURCE_ROOT; };
 		1BD9EDC91DE187F7007679BE /* BleSampleApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleSampleApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD9EDCC1DE187F7007679BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD9EDCE1DE187F7007679BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BD9EDD11DE187F7007679BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BD9EDD31DE187F7007679BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BD9EDD61DE187F7007679BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BD9EDD81DE187F7007679BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,9 +117,17 @@
 		1BD9EDCB1DE187F7007679BE /* BleSampleApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				1B6A4E551DEEECF9004CC47A /* googleform2.png */,
+				1B6A4E531DEEDE5C004CC47A /* googleform.png */,
+				1B6A4E4B1DEED7DE004CC47A /* 0.png */,
+				1B6A4E4C1DEED7DE004CC47A /* 1.png */,
+				1B6A4E4D1DEED7DE004CC47A /* 2.png */,
+				1B40C3361DEF0F830096DD8E /* Main.storyboard */,
+				1B6A4E4E1DEED7DE004CC47A /* OnboardingViewController.swift */,
+				1B40C3381DEF13980096DD8E /* putUrlViewController.swift */,
 				1BD9EDCC1DE187F7007679BE /* AppDelegate.swift */,
 				1BD9EDCE1DE187F7007679BE /* ViewController.swift */,
-				1BD9EDD01DE187F7007679BE /* Main.storyboard */,
+				1B4FF0AC1DEF06AC00D0AD98 /* createViewController.swift */,
 				1BD9EDD31DE187F7007679BE /* Assets.xcassets */,
 				1BD9EDD51DE187F7007679BE /* LaunchScreen.storyboard */,
 				1BD9EDD81DE187F7007679BE /* Info.plist */,
@@ -247,9 +271,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6A4E541DEEDE5C004CC47A /* googleform.png in Resources */,
+				1B6A4E511DEED7DE004CC47A /* 2.png in Resources */,
+				1B6A4E4F1DEED7DE004CC47A /* 0.png in Resources */,
+				1B40C3371DEF0F830096DD8E /* Main.storyboard in Resources */,
 				1BD9EDD71DE187F7007679BE /* LaunchScreen.storyboard in Resources */,
 				1BD9EDD41DE187F7007679BE /* Assets.xcassets in Resources */,
-				1BD9EDD21DE187F7007679BE /* Main.storyboard in Resources */,
+				1B6A4E561DEEECF9004CC47A /* googleform2.png in Resources */,
+				1B6A4E501DEED7DE004CC47A /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4FF0AD1DEF06AC00D0AD98 /* createViewController.swift in Sources */,
 				1BD9EDCF1DE187F7007679BE /* ViewController.swift in Sources */,
+				1B6A4E521DEED7DE004CC47A /* OnboardingViewController.swift in Sources */,
 				1BD9EDCD1DE187F7007679BE /* AppDelegate.swift in Sources */,
+				1B40C3391DEF13980096DD8E /* putUrlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +343,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1BD9EDD01DE187F7007679BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BD9EDD11DE187F7007679BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BD9EDD51DE187F7007679BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6S8ECZJ37R;
 				INFOPLIST_FILE = BleSampleApp2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.isshin.BleSampleApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,7 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6S8ECZJ37R;
 				INFOPLIST_FILE = BleSampleApp2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.isshin.BleSampleApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
