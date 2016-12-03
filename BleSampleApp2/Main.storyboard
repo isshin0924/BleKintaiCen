@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,7 @@
                     <navigationItem key="navigationItem" id="rSp-0Z-Nn6"/>
                     <connections>
                         <segue destination="6JK-hb-qfv" kind="show" id="KG1-fy-Y14"/>
-                        <segue destination="ai3-Pw-9RB" kind="show" id="idH-bd-Ero"/>
+                        <segue destination="ai3-Pw-9RB" kind="show" id="9op-pI-ppZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uko-vO-Lnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -35,7 +36,7 @@
         <!--Put Url View Controller-->
         <scene sceneID="ZDD-8K-XYL">
             <objects>
-                <viewController id="ai3-Pw-9RB" customClass="putUrlViewController" customModule="BleSampleApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="putUrl" id="ai3-Pw-9RB" customClass="putUrlViewController" customModule="BleSampleApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EKl-DV-bPu"/>
                         <viewControllerLayoutGuide type="bottom" id="BZW-Y9-7Qt"/>
@@ -44,29 +45,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GoogleFormURL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-A9-tnS">
-                                <rect key="frame" x="0.0" y="115" width="375" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-rm-epK">
-                                <rect key="frame" x="16" y="203" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-9P-Ooy">
+                                <rect key="frame" x="16" y="182" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogg-gY-09h">
-                                <rect key="frame" x="105" y="257" width="164" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Submit"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GoogleFormURL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-Ix-kC6">
+                                <rect key="frame" x="16" y="90" width="343" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-Gt-6zj">
+                                <rect key="frame" x="113" y="243" width="148" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="pushStart:" destination="ai3-Pw-9RB" eventType="touchUpInside" id="klS-IC-caf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p3Q-9P-Ooy" firstAttribute="leading" secondItem="0ph-hX-QMx" secondAttribute="leadingMargin" id="0HJ-bI-RET"/>
+                            <constraint firstItem="p3Q-9P-Ooy" firstAttribute="top" secondItem="ZEi-Ix-kC6" secondAttribute="bottom" constant="32" id="0eA-s1-nUK"/>
+                            <constraint firstItem="RfN-Gt-6zj" firstAttribute="leading" secondItem="0ph-hX-QMx" secondAttribute="leadingMargin" constant="97" id="2Ma-JS-7hg"/>
+                            <constraint firstItem="RfN-Gt-6zj" firstAttribute="top" secondItem="p3Q-9P-Ooy" secondAttribute="bottom" constant="31" id="GHx-oZ-S3M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RfN-Gt-6zj" secondAttribute="trailing" constant="98" id="Jv1-Kd-cX3"/>
+                            <constraint firstItem="BZW-Y9-7Qt" firstAttribute="top" secondItem="RfN-Gt-6zj" secondAttribute="bottom" constant="394" id="Lwi-Rv-Ai1"/>
+                            <constraint firstItem="p3Q-9P-Ooy" firstAttribute="top" secondItem="ZEi-Ix-kC6" secondAttribute="bottom" constant="32" id="QqC-Fy-ppZ"/>
+                            <constraint firstItem="p3Q-9P-Ooy" firstAttribute="trailing" secondItem="0ph-hX-QMx" secondAttribute="trailingMargin" id="Rgx-ld-Rxu"/>
+                            <constraint firstItem="RfN-Gt-6zj" firstAttribute="top" secondItem="p3Q-9P-Ooy" secondAttribute="bottom" constant="31" id="Xse-7V-DbP"/>
+                            <constraint firstItem="ZEi-Ix-kC6" firstAttribute="top" secondItem="EKl-DV-bPu" secondAttribute="bottom" constant="26" id="gFE-Lg-62q"/>
+                            <constraint firstItem="ZEi-Ix-kC6" firstAttribute="trailing" secondItem="0ph-hX-QMx" secondAttribute="trailingMargin" id="gSd-Ur-JyJ"/>
+                            <constraint firstItem="ZEi-Ix-kC6" firstAttribute="leading" secondItem="0ph-hX-QMx" secondAttribute="leadingMargin" id="kjU-Rd-4uu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="urlEnt" destination="p3Q-9P-Ooy" id="Aha-73-vH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtP-6i-jKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +111,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BleSampleApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view" id="BYZ-38-t0r" customClass="ViewController" customModule="BleSampleApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -120,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="116"/>
+            <point key="canvasLocation" x="2209" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n9a-YW-coA">

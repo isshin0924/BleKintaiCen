@@ -15,6 +15,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UIWebViewDeleg
     var myBeaconRegion:CLBeaconRegion!
     var beaconUuids: NSMutableArray!
     var beaconDetails: NSMutableArray!
+    var urlUserDefault = ""
+        
     @IBOutlet weak var webview: UIWebView!
     // 今回の検知対象は3つのUUID。(OS等のバージョンで検出可能な上限数は20個程度が目安)
     let UUIDList = [
@@ -25,6 +27,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UIWebViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UserDefaultから保存した配列を取り出す
+        var myDefault = UserDefaults.standard
+        
+        if (myDefault.object(forKey: "url") != nil){
+            //データを呼び出して
+            urlUserDefault = myDefault.object(forKey: "url") as! String
+            print(urlUserDefault)
+        }
         
         // ロケーションマネージャの作成.
         myLocationManager = CLLocationManager()
@@ -128,6 +139,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UIWebViewDeleg
         manager.requestState(for: region);
     }
     
+    
     /*
      [iBeacon 手順4] 現在リージョン内にiBeaconが存在するかどうかの通知を受け取る.
      */
@@ -148,8 +160,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate,UIWebViewDeleg
             // WebViewのサイズを設定.
             webview.frame = self.view.bounds
             
+            let Url = urlUserDefault
             // URLを設定.
-            let url: URL = URL(string: "https://goo.gl/forms/9Ln735HtnOKnpi6J3")!
+            print(Url)
+            let url: URL = URL(string: "\(Url)")!
             
             // リエストを発行する.
             let request: NSURLRequest = NSURLRequest(url: url)

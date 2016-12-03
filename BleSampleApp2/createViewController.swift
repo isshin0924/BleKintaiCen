@@ -11,6 +11,7 @@ class createViewController: UIViewController, UIWebViewDelegate  {
     
     let webView : UIWebView = UIWebView()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,7 @@ class createViewController: UIViewController, UIWebViewDelegate  {
         
         // リクエストを投げる
         webView.loadRequest(request)
+        //self.navigationController?.popViewController(animated: true)
         
     }
     

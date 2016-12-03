@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //ナビゲーションバーの背景を変更
-        UINavigationBar.appearance().barTintColor = UIColor.green
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.03, green:0.53, blue:0.90, alpha:1.0)
         //ナビゲーションのタイトル文字列の色を変更
+        
         return true
     }
 

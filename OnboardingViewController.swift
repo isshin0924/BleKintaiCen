@@ -8,13 +8,14 @@ import UIKit
 class OnboardingController: UIViewController, UIScrollViewDelegate {
     let backgroundColor = UIColor(red:0.03, green:0.53, blue:0.90, alpha:1.0)
     let slides = [
-        [ "image": "googleform2.png", "Title": "Thank you installed!","text":"This is TimeCard application"],
+        [ "image": "googleform2.png", "Title": "Thank you installed!","text":"This is TimeCard application.This app uses Bluetooth function. "],
         [ "image": "googleform2.png", "Title": "1:Create google form!","text":"1st Please create google form on the website. 2nd Enter Form's URL that is your created.When you create form,Push 'create' button!"],
         [ "image": "googleform2.png", "Title": "Let's use this app!","text":"OK! Completed!"],
         ]
     let screen: CGRect = UIScreen.main.bounds
     var scroll: UIScrollView?
     var dots: UIPageControl?
+    var a = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = backgroundColor
@@ -22,6 +23,8 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
         scroll?.showsHorizontalScrollIndicator = false
         scroll?.showsVerticalScrollIndicator = false
         scroll?.isPagingEnabled = true
+        
+        scroll?.delegate = self
         view.addSubview(scroll!)
         if (slides.count > 1) {
             dots = UIPageControl(frame: CGRect(x: 0.0, y: screen.height * 0.875, width: screen.width, height: screen.height * 0.05))
@@ -34,20 +37,22 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
                 imageView.image = image
                 scroll?.addSubview(imageView)
             }
+            
+            //title
             if let title = slides[i]["Title"]{
-                let titleView = UITextView(frame: CGRect(x:20,y:200,width: screen.width * 0.9, height: 100.0))
+                let titleView = UITextView(frame: CGRect(x:screen.width * 0.05 + CGFloat(i) * screen.width,y:100,width: screen.width * 0.9, height: 100.0))
                 titleView.text = title
-                titleView.font = UIFont(name:"Apple Color Emoji",size:20)
+                titleView.font = UIFont(name:"Apple Color Emoji",size:48)
                 titleView.isEditable = false
                 titleView.isSelectable = false
                 titleView.textAlignment = NSTextAlignment.center
-                titleView.font = UIFont.systemFont(ofSize: 20, weight: 0)
+                titleView.font = UIFont.systemFont(ofSize: 35, weight: 0)
                 titleView.textColor = UIColor.white
                 titleView.backgroundColor = UIColor.clear
                 scroll?.addSubview(titleView)
             }
             
-            
+            //text
             if let text = slides[i]["text"] {
                 let textView = UITextView(frame: CGRect(x: screen.width * 0.05 + CGFloat(i) * screen.width, y: 400, width: screen.width * 0.9, height: 100.0))
                 textView.text = text
@@ -108,19 +113,24 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
             scroll?.setContentOffset(CGPointMake(x, 0), animated: true)
         }
     }
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) -> () {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         dots!.currentPage = Int(pageNumber)
-        var a = 0
-        a += 1
-        print(a)
-        if a==3{
+        //a += 1
+        //print(a)
+        print(pageNumber)
+        if Float(pageNumber)==2.0{
             // 遷移するViewを定義する.
-            let putViewController: UIViewController = putUrlViewController()
+            // let putViewController: UIViewController = putUrlViewController()
+           // let SecondViewController: UIViewController = putUrlViewController()
+            let secondViewController: UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "putUrl") as! putUrlViewController
             // Viewの移動する.
-            self.present(putViewController, animated: true, completion: nil)
+            //self.present(putViewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+            
         }
-
+        
     }
     
     
@@ -149,7 +159,8 @@ class OnboardingController: UIViewController, UIScrollViewDelegate {
         //mySecondViewController.modalTransitionStyle = .partialCurl
         
         // Viewの移動する.
-        self.present(mySecondViewController, animated: true, completion: nil)
+        //self.present(mySecondViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(mySecondViewController, animated: true)
     }
     
 }
